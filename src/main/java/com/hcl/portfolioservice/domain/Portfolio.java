@@ -1,6 +1,7 @@
 package com.hcl.portfolioservice.domain;
 
 import com.hcl.portfolioservice.enums.InvestmentStrategyEnum;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -13,18 +14,25 @@ import org.springframework.stereotype.Component;
 public class Portfolio {
 
     @Id
-    long id;
+    @Column(name = "ID")
+    private long id;
 
-    String customerId;
+    @Column(name = "CUSTOMER_ID")
+    private String customerId;
 
-    String customerName;
+    @Column(name = "CUSTOMER_NAME")
+    private String customerName;
 
-    String portfolioNumber;
+    @Column(name = "PORTFOLIO_NO")
+    private String portfolioNumber;
 
-    String portfolioValue;
+    @Column(name = "PORTFOLIO_VALUE")
+    private String portfolioValue;
 
-    String portfolioPerformance;
+    @Column(name = "CURRENT_PERF")
+    private String portfolioPerformance;
 
-    InvestmentStrategyEnum investmentStrategy;
+    @Column(name = "INVESTMENT_STRATEGY")
+    private InvestmentStrategyEnum investmentStrategy;
 
 }

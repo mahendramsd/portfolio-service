@@ -8,16 +8,25 @@ import lombok.Setter;
 @Setter
 public class PortfolioDto {
 
-    String portfolio_id;
+    private Long portfolioId;
 
-    String customerName;
+    private String customerName;
 
-    String portfolioNumber;
+    private String portfolioNumber;
 
-    String portfolioValue;
+    private String portfolioValue;
 
-    String portfolioPerformance;
+    private String portfolioPerformance;
 
-    InvestmentStrategyEnum investmentStrategy;
+    private InvestmentStrategyEnum investmentStrategy;
 
+    public PortfolioDto(Long portfolioId, String customerName, String portfolioNumber, String portfolioValue,
+                        String portfolioPerformance, InvestmentStrategyEnum investmentStrategy) {
+        this.portfolioId = portfolioId;
+        this.customerName = customerName;
+        this.portfolioNumber = portfolioNumber;
+        this.portfolioValue = portfolioValue;
+        this.portfolioPerformance = portfolioPerformance;
+        this.investmentStrategy = investmentStrategy;
+    }
 }
