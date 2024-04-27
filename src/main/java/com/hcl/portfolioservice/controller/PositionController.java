@@ -34,4 +34,10 @@ public class PositionController {
         return ResponseEntity.ok(positionService.getAllPositions());
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePosition(@PathVariable Long id) {
+        positionService.deletePosition(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }

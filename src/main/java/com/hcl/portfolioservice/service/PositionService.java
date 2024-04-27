@@ -14,4 +14,6 @@ public interface PositionService {
     PositionResponse createPosition(PositionRequest positionRequest);
 
     List<PositionResponse> getAllPositions();
+
+    void deletePosition(Long id);
 }
