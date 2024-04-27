@@ -4,13 +4,14 @@ import com.hcl.portfolioservice.enums.InvestmentStrategyEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Component;
 
 @Entity
 @Getter
 @Setter
+@Table(name = "PORTFOLIO")
 public class Portfolio {
 
     @Id
