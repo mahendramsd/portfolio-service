@@ -1,4 +1,4 @@
-package com.hcl.portfolioservice.database.entity;
+package com.hcl.portfolioservice.domain;
 
 import com.hcl.portfolioservice.enums.InvestmentStrategyEnum;
 import jakarta.persistence.Entity;
