@@ -23,7 +23,7 @@ public class PositionController {
         this.positionService = positionService;
     }
 
-    @PostMapping
+    @PostMapping("/trade")
     public ResponseEntity<PositionResponse> createPosition(@RequestBody PositionRequest positionRequest) {
         return ResponseEntity.ok(positionService.createPosition(positionRequest));
     }
