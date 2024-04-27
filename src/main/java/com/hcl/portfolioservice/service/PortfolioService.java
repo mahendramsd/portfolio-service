@@ -1,10 +1,12 @@
 package com.hcl.portfolioservice.service;
 
+import com.hcl.portfolioservice.model.PortfolioDto;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class PortfolioService {
+public interface PortfolioService {
 
+    List<PortfolioDto> getPortfolios(String customerId);
 
+    PortfolioDto getPortfolio(String portfolioNumber);
 }
