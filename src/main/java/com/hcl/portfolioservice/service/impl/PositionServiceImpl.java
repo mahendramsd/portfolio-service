@@ -16,6 +16,7 @@ import java.util.List;
 @Service
 public class PositionServiceImpl implements PositionService {
 
+
     @Override
     public PositionResponse createPosition(PositionRequest positionRequest) {
         return null;
@@ -24,5 +25,10 @@ public class PositionServiceImpl implements PositionService {
     @Override
     public List<PositionResponse> getAllPositions() {
         return List.of();
+    }
+
+    @Override
+    public void deletePosition(Long id) {
+
     }
 }
