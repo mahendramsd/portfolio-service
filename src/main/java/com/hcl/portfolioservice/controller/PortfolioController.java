@@ -3,13 +3,9 @@ package com.hcl.portfolioservice.controller;
 import com.hcl.portfolioservice.model.CustomerPortfolioDto;
 import com.hcl.portfolioservice.model.PortfolioDto;
 import com.hcl.portfolioservice.service.PortfolioService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,7 +22,7 @@ public class PortfolioController {
     }
 
     @GetMapping("/{portfolioId}")
-    public ResponseEntity<PortfolioDto> getPortfolioById(@PathParam("portfolioId") String portfolioId){
+    public ResponseEntity<PortfolioDto> getPortfolioById(@PathVariable("portfolioId") String portfolioId){
         return ResponseEntity.ok(portfolioService.getPortfolio(portfolioId));
     }
 }
