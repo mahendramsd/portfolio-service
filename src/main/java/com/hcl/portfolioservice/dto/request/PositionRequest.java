@@ -13,5 +13,6 @@ public class PositionRequest {
         private Long instrumentId;
         private Long portfolioId;
         private Integer units;
+        private String tradeType;
 
 }

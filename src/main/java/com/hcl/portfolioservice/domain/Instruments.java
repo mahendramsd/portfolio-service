@@ -23,4 +23,6 @@ public class Instruments {
     @Column(name = "INSTRUMENT_TYPE")
     @Enumerated(EnumType.STRING)
     private InstrumentType instrumentType;
+
+
 }
