@@ -1,4 +1,4 @@
-package com.hcl.portfolioservice.domain.repository;
+package com.hcl.portfolioservice.repository;
 
 import com.hcl.portfolioservice.domain.Portfolio;
 import org.springframework.data.jpa.repository.JpaRepository;

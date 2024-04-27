@@ -30,19 +30,13 @@ public class Position {
     @Enumerated(EnumType.STRING)
     private TradeType tradeType;
 
-//    @Column (name = "INSTRUMENT_ID")
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    private Instruments instrument;
-//
-//    @Column (name = "PORTFOLIO_ID")
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    private Portfolio portfolio;
+    @JoinColumn (name = "INSTRUMENT_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Instruments instrument;
 
-    @Column (name = "INSTRUMENT_ID")
-    private Long instrument;
-
-    @Column (name = "PORTFOLIO_ID")
-    private Long portfolio;
+    @JoinColumn (name = "PORTFOLIO_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Portfolio portfolio;
 
 
 }

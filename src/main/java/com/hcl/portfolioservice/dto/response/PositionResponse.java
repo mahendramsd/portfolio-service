@@ -18,9 +18,10 @@ public class PositionResponse {
 
     public PositionResponse(Position position) {
         this.id = position.getId();
-        this.portfolioId = position.getPortfolio();
-        this.instrumentId = position.getInstrument();
+        this.portfolioId = position.getPortfolio().getId();
+        this.instrumentId = position.getInstrument().getId();
         this.units = position.getUnits();
         this.transactionRef = position.getTransactionRef();
     }
 }
+
